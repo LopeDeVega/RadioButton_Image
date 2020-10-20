@@ -1,0 +1,78 @@
+﻿<Window x:Class="_29.RadioButton_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_29.RadioButton_WPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+   
+        <!--//Divide the panel into two rows-->
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="75">  </RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            
+        </Grid.RowDefinitions>
+
+        <!--First Row Title and Formatting-->
+        <Grid Grid.Row="0" Background="Black">
+        <TextBlock Name="Title" FontSize="25" HorizontalAlignment="Center" Margin="12"  Foreground="White" FontFamily="Arial" FontStyle="Italic"> RadioButton and TrafficLight </TextBlock>
+        <!--<TextBlock Name="Title" FontStyle="Italic"  Foreground="Azure" FontSize="25" FontFamily="Arial" HorizontalAlignment="Center"> RadioButton and TrafficLight </TextBlock>-->
+        </Grid>
+    
+        <!--Second Row devided into two columns / One Radio Buttons/ Second Image-->
+        <Grid Grid.Row="1">
+
+
+            <Grid.ColumnDefinitions>
+
+                <!--Dividing the columns using avarage //make the same as the code underneath-->
+                <ColumnDefinition Width="0.5*"></ColumnDefinition>
+                <ColumnDefinition Width="0.5*"></ColumnDefinition>
+
+
+                <!--<ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>-->
+
+            </Grid.ColumnDefinitions>
+           
+            <!--Radio Button column-->
+            <Grid Grid.Column="0" Background="Orange">
+
+
+                <StackPanel>
+                   
+                    <!--Inserting RadioButtons-->
+                    <RadioButton  Name="rbRed"     Click="rb_Click" FontSize="15" Foreground="Brown" FontFamily="Arial" FontWeight="Bold" HorizontalAlignment="Center"  Margin="30">Turn Red</RadioButton>
+                    <RadioButton  Name="rbYellow"  Click="rb_Click" FontSize="15" Foreground="Brown" FontFamily="Arial" FontWeight="Bold" HorizontalAlignment="Center" Margin="30">Turn Yellow</RadioButton>
+                    <RadioButton  Name="rbGreen"   Click="rb_Click" FontSize="15" Foreground="Brown" FontFamily="Arial" FontWeight="Bold" HorizontalAlignment="Center" Margin="30">Turn Green</RadioButton>
+
+                </StackPanel>
+                
+                
+                
+                
+            </Grid>
+
+            <Grid Grid.Column="1" Background="BlanchedAlmond">
+
+                <Image Source="C:\Users\senti\source\repos\Course C#\29.RadioButton_WPF\TrafficLight_3.png"></Image>
+                <StackPanel>
+                    <Ellipse x:Name="Red" Fill="Red" Width="57" Height="57" Margin="0,21,104 ,20" Visibility="Hidden"></Ellipse>
+                    <Ellipse x:Name="Yellow" Fill="Yellow" Width="57" Height="57" Margin="0,-10,104 ,20" Visibility="Hidden"></Ellipse>
+                    <Ellipse x:Name="Green" Fill="Green" Width="57" Height="57" Margin="0,-10,104 ,20" Visibility="Hidden"></Ellipse>
+                </StackPanel>
+
+            </Grid>
+
+
+           
+            
+            
+            
+        </Grid>
+        
+    </Grid>
+</Window>
